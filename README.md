@@ -1,4 +1,4 @@
-# WhatsApp Baileys
+# Bot Baileys
 
 <p align="center">
   <img src="https://files.catbox.moe/ebag6l.jpg" alt="Thumbnail" />
@@ -59,7 +59,7 @@ await sock.sendMessage(jid, {
             degreesLongitude: 0, 
             name: "rowrrrr" 
         }, 
-        joinLink: "https://call.whatsapp.com/video/yumevtc", 
+        joinLink: "https://call.whatsapp.com/video/kepomeemwk", 
         startTime: "1763019000", 
         endTime: "1763026200", 
         extraGuestsAllowed: false 
@@ -95,7 +95,7 @@ Send basic interactive messages with copy button functionality:
 await sock.sendMessage(jid, {
     interactiveMessage: {
         title: "Hello World",
-        footer: "telegram: @yumevtc ",
+        footer: "telegram: @kepomeemwk ",
         buttons: [
             {
                 name: "cta_copy",
@@ -117,13 +117,13 @@ Send interactive messages with buttons, copy actions, and native flow features:
 await sock.sendMessage(jid, {    
     interactiveMessage: {      
         title: "Hello World",      
-        footer: "telegram: @yumevtc",      
+        footer: "telegram: @kepomeemwk",      
         image: { url: "https://example.com/image.jpg" },      
         nativeFlowMessage: {        
             messageParamsJson: JSON.stringify({          
                 limited_time_offer: {            
                     text: "idk hummmm?",            
-                    url: "https://t.me/yumevtc",            
+                    url: "https://t.me/kepomeemwk",            
                     copy_code: "yume",            
                     expiration_time: Date.now() * 999          
                 },          
@@ -136,7 +136,7 @@ await sock.sendMessage(jid, {
                 tap_target_configuration: {            
                     title: " X ",            
                     description: "bomboclard",            
-                    canonical_url: "https://t.me/yumevtc",            
+                    canonical_url: "https://t.me/kepomeemwk",            
                     domain: "shop.example.com",            
                     button_index: 0          
                 }        
@@ -164,7 +164,7 @@ await sock.sendMessage(jid, {
                                 highlight_label: "label",                  
                                 rows: [                    
                                     {                      
-                                        title: "@yumevtc",                      
+                                        title: "@kepomeemwk",                      
                                         description: "love you",                      
                                         id: "row_2"                    
                                     }                  
@@ -195,7 +195,7 @@ Send interactive messages with thumbnail image and copy button:
 await sock.sendMessage(jid, {
     interactiveMessage: {
         title: "Hello World",
-        footer: "telegram: @yumevtc",
+        footer: "telegram: @kepomeemwk",
         image: { url: "https://example.com/image.jpg" },
         buttons: [
             {
@@ -247,10 +247,10 @@ Send interactive messages with document from buffer (file system) - **Note: Docu
 await sock.sendMessage(jid, {
     interactiveMessage: {
         title: "Hello World",
-        footer: "telegram: @yumevtc",
+        footer: "telegram: @kepomeemwk",
         document: fs.readFileSync("./package.json"),
         mimetype: "application/pdf",
-        fileName: "yumevtc.pdf",
+        fileName: "kepomeemwk.pdf",
         jpegThumbnail: fs.readFileSync("./document.jpeg"),
         contextInfo: {
             mentionedJid: [jid],
@@ -263,7 +263,7 @@ await sock.sendMessage(jid, {
             mediaType: 3,
             thumbnailUrl: "https://example.com/image.jpg",
             mediaUrl: " X ",
-            sourceUrl: "https://t.me/yumevtc",
+            sourceUrl: "https://t.me/kepomeemwk",
             showAdAttribution: true,
             renderLargerThumbnail: false         
         },
@@ -272,8 +272,8 @@ await sock.sendMessage(jid, {
                 name: "cta_url",
                 buttonParamsJson: JSON.stringify({
                     display_text: "Telegram",
-                    url: "https://t.me/yumevtc",
-                    merchant_url: "https://t.me/yumevtc"
+                    url: "https://t.me/kepomeemwk",
+                    merchant_url: "https://t.me/kepomeemwk"
                 })
             }
         ]
@@ -288,18 +288,18 @@ Send interactive messages with document from buffer (file system) without contex
 await sock.sendMessage(jid, {
     interactiveMessage: {
         title: "Hello World",
-        footer: "telegram: @yumevtc",
+        footer: "telegram: @kepomeemwk",
         document: fs.readFileSync("./package.json"),
         mimetype: "application/pdf",
-        fileName: "yumevtc.pdf",
+        fileName: "kepomeemwk.pdf",
         jpegThumbnail: fs.readFileSync("./document.jpeg"),
         buttons: [
             {
                 name: "cta_url",
                 buttonParamsJson: JSON.stringify({
                     display_text: "Telegram",
-                    url: "https://t.me/yumevtc",
-                    merchant_url: "https://t.me/yumevtc"
+                    url: "https://t.me/kepomeemwk",
+                    merchant_url: "https://t.me/kepomeemwk"
                 })
             }
         ]
@@ -357,3 +357,112 @@ Because this library offers high stability, full features, and an actively impro
 For complete documentation, installation guides, and implementation examples, please visit the official repository and community forums. We continually update and improve this library to meet the needs of developers and users of modern WhatsApp automation solutions.
 
 **Thank you for choosing WhatsApp Baileys as your WhatsApp automation solution!**
+--- 
+
+## Usage
+```json
+"depencies": {
+  "@whiskeysockets/baileys": "github:RizzKece597/bot"
+}
+```
+## Import
+```javascript
+const {
+  default:makeWASocket,
+  // Other Options 
+} = require('@whiskeysockets/baileys');
+```
+
+---
+# How To Connect To Whatsapp
+## With QR Code
+```javascript
+const {
+  default: makeWASocket
+} = require('@whiskeysockets/baileys');
+
+const client = makeWASocket({
+  browser: ['Ubuntu', 'Chrome', '20.00.1'],
+  printQRInTerminal: true
+})
+```
+
+## Connect With Number
+```javascript
+const {
+  default: makeWASocket
+} = require('@whiskeysockets/baileys');
+
+const client = makeWASocket({
+  browser: ['Ubuntu', 'Chrome', '20.00.1'],
+  printQRInTerminal: true,
+  // Other options
+});
+
+const number = "628XXXXX";
+const code = await client.requestPairingCode(number.trim) /* Use : (number, "YYYYYYYY") for custom-pairing */
+
+console.log("Ur pairing code : " + code)
+```
+
+# Sending messages
+
+## send orderMessage
+```javascript
+const fs = require('fs');
+const RizzImg = fs.readFileSync('./RizzImg');
+
+await client.sendMessage(m.chat, {
+  thumbnail: RizzImg,
+  message: "Gotta get a grip",
+  orderTitle: "ZhT | Rizz -IsHere",
+  totalAmount1000: 72502,
+  totalCurrencyCode: "IDR"
+}, { quoted:m })
+```
+
+## send pollResultSnapshotMessage
+```javascript
+await client.sendMessage(m.chat, {
+  pollResultMessage: {
+    name: "ZhT | Rizz -IsHere",
+    options: [
+      {
+        optionName: "poll 1"
+      },
+      {
+        optionName: "poll 2"
+      }
+    ],
+    newsletter: {
+      newsletterName: "ZhT | Rizz -Is Here",
+      newsletterJid: "1@newsletter"
+    }
+  }
+})
+```
+
+## send productMessage
+```javascript
+await client.relayMessage(m.chat, {
+  productMessage {
+    title: "饾悥饾悮饾惌饾悮饾惉饾悺饾悽 隆 携9 - 饾棩饾椂饾槆饾槆 饾悆饾悶饾惉饾惍 驴",
+    description: "zZZ...",
+    thumbnail: { url: "./RizzImg" },
+    productId: "EXAMPLE_TOKEN",
+    retailerId: "EXAMPLE_RETAILER_ID",
+    url: "https://t.me/kepomeemwk",
+    body: "Pen Nenen",
+    footer: "Footer",
+    buttons: [
+      {
+        name: "cta_url",
+        buttonParamsJson: "{\"display_text\":\"饾悥饾悮饾惌饾悮饾惉饾悺饾悽 隆 携9 - 饾棩饾椂饾槆饾槆 饾悆饾悶饾惉饾惍 驴\",\"url\":\"https://t.me/kepomeemwk\"}"
+      }
+    ],
+    priceAmount1000: 72502,
+    currencyCode: "IDR"
+  }
+})
+```
+Follow https://t.me/rizzbaileys kalau mau liat type message yg lain :v
